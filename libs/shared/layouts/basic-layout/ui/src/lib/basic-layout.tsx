@@ -1,12 +1,10 @@
 import styles from './basic-layout.module.scss';
+import { Outlet } from 'react-router-dom';
 
-/* eslint-disable-next-line */
-export interface BasicLayoutProps {}
-
-export function BasicLayout(props: BasicLayoutProps) {
+export function BasicLayout() {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to BasicLayout!</h1>
+      <Outlet/>
     </div>
   );
 }
