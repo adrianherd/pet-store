@@ -8,8 +8,12 @@ export function Landing() {
   return (
     <div className={styles['container']}>
       <h1>Welcome to Landing!</h1>
-      <Link to="/pet-list">Pet List</Link>
-      <Link to="/login">Login</Link>
+      <div>
+        <Link to="/pet-list">Pet List</Link>
+      </div>
+      <div>
+        <Link to="/login">Login</Link>
+      </div>
     </div>
   );
 }
