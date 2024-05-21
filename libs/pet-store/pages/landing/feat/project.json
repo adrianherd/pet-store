@@ -1,9 +1,0 @@
-{
-  "name": "landing",
-  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/pet-store/pages/landing/feat/src",
-  "projectType": "library",
-  "tags": ["type:feat"],
-  "// targets": "to see all targets run: nx show project landing --web",
-  "targets": {}
-}
