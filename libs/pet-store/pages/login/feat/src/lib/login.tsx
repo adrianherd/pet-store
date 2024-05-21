@@ -29,12 +29,10 @@ export function Login() {
 
     try {
       setLoading(true);
-      const resp = await fetch(loginUrl);
+      await fetch(loginUrl);
       setLoading(false);
-      console.log(resp)
     } catch (err) {
       setLoading(false);
-      console.log(err);
     }
     setIsAuthenticated(true)
     navigate('/pet-list')

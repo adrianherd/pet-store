@@ -7,6 +7,8 @@ To run this application, you must have the following installed:
 - Docker (CLI used in serve script)
 - Node
 
+Ensure that Docker Desktop/Daemon is already running on your computer before starting the application
+
 ## Start the application
 
 Run `npx nx serve pet-store` to start the development server. This commands prepares the docker container for you as such:
