@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
-import { UserAuthContextProvider } from '@pet-store/libs-shared-core-user-data-access';
+import { UserAuthContextProvider } from '@pet-store/shared/core/user/data-access';
 
 
 
