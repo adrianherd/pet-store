@@ -23,7 +23,7 @@ export function Login() {
 
 
   const loginHandler = async () => {
-    const loginUrl = new URL('http://localhost:8080/user/login')
+    const loginUrl = new URL('http://localhost:8080/api/v3/user/login')
     loginUrl.searchParams.append('email', email);
     loginUrl.searchParams.append('password', password);
 
