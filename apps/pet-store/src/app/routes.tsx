@@ -1,8 +1,10 @@
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom';
 import { BasicLayout } from '@pet-store/shared/layouts/basic-layout/ui';
-import { Login } from '@pet-store/pet-store/pages/login/feat';
-import { PetList } from '@pet-store/pet-store/pages/pet-list/feat';
 import { ProtectedRoute } from '@pet-store/shared/guards/protected-route/data-access';
+import { lazy } from 'react';
+
+const Login = lazy(() => import('@pet-store/pet-store/pages/login/feat').then(({ Login: FC }) => ({ default: FC })))
+const PetList = lazy(() => import('@pet-store/pet-store/pages/pet-list/feat').then(({ PetList: FC })=> ({ default: FC })))
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
