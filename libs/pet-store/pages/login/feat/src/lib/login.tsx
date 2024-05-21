@@ -8,13 +8,9 @@ import LinearProgress from '@mui/material/LinearProgress';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { IS_AUTHENTICATED_TOKEN } from '@pet-store/user';
+import { IS_AUTHENTICATED_TOKEN } from '@pet-store/shared/core/user/util';
 
-
-/* eslint-disable-next-line */
-export interface LoginProps {}
-
-export function Login(props: LoginProps) {
+export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);

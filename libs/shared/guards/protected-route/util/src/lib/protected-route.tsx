@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
-import { IS_AUTHENTICATED_TOKEN } from '@pet-store/user';
+import { IS_AUTHENTICATED_TOKEN } from '@pet-store/shared/core/user/util';
 
 export interface ProtectedRouteProps {
   redirectPath?: string,
