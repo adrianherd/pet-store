@@ -1,5 +1,5 @@
 {
-  "name": "user",
+  "name": "libs-shared-core-user-util",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/core/user/util/src",
   "projectType": "library",

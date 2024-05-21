@@ -1,9 +1,10 @@
 import { Navigate, Outlet } from 'react-router-dom';
-import { IS_AUTHENTICATED_TOKEN } from '@pet-store/shared/core/user/util';
+import { ReactNode, useContext } from 'react';
+import { UserAuthContext } from '@pet-store/shared/core/user/data-access';
 
 export interface ProtectedRouteProps {
   redirectPath?: string,
-  children?: React.ReactNode,
+  children?: ReactNode,
 }
 
 /*
@@ -21,7 +22,8 @@ export interface ProtectedRouteProps {
     </Route>
  */
 export function ProtectedRoute({ redirectPath = '/login', children }: ProtectedRouteProps) {
-  if (sessionStorage.getItem(IS_AUTHENTICATED_TOKEN) !== 'true') {
+  const { isAuthenticated } = useContext(UserAuthContext);
+  if (!isAuthenticated) {
     return <Navigate to={redirectPath} />
   }
   return children ? children : <Outlet />

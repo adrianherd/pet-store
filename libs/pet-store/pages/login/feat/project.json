@@ -1,5 +1,5 @@
 {
-  "name": "login",
+  "name": "libs-pet-store-pages-login-feat",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/pet-store/pages/login/feat/src",
   "projectType": "library",

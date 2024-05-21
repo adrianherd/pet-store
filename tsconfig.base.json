@@ -21,13 +21,16 @@
       "@pet-store/pet-store/pages/pet-list/feat": [
         "libs/pet-store/pages/pet-list/feat/src/index.ts"
       ],
-      "@pet-store/shared/guards/protected-route/util": [
-        "libs/shared/guards/protected-route/util/src/index.ts"
+      "@pet-store/shared/core/user/data-access": [
+        "libs/shared/core/user/data-access/src/index.ts"
+      ],
+      "@pet-store/shared/core/user/util": ["libs/shared/core/user/util/src/index.ts"],
+      "@pet-store/shared/guards/protected-route/data-access": [
+        "libs/shared/guards/protected-route/data-access/src/index.ts"
       ],
       "@pet-store/shared/layouts/basic-layout/ui": [
         "libs/shared/layouts/basic-layout/ui/src/index.ts"
       ],
-      "@pet-store/shared/core/user/util": ["libs/shared/core/user/util/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

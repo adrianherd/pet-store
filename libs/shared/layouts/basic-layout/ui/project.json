@@ -1,5 +1,5 @@
 {
-  "name": "basic-layout",
+  "name": "libs-shared-layouts-basic-layout-ui",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/layouts/basic-layout/ui/src",
   "projectType": "library",

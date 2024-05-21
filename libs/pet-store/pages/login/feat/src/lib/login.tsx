@@ -9,9 +9,9 @@ import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress';
 import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { IS_AUTHENTICATED_TOKEN } from '@pet-store/shared/core/user/util';
+import { UserAuthContext } from '@pet-store/shared/core/user/data-access';
 
 
 export function Login() {
@@ -19,6 +19,8 @@ export function Login() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useContext(UserAuthContext)
+
 
   const loginHandler = async () => {
     const loginUrl = new URL('http://localhost:8080/user/login')
@@ -34,7 +36,7 @@ export function Login() {
       setLoading(false);
       console.log(err);
     }
-    sessionStorage.setItem(IS_AUTHENTICATED_TOKEN, 'true')
+    setIsAuthenticated(true)
     navigate('/pet-list')
   }
   return (

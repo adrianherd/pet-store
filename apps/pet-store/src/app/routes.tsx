@@ -2,7 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from '
 import { BasicLayout } from '@pet-store/shared/layouts/basic-layout/ui';
 import { Login } from '@pet-store/pet-store/pages/login/feat';
 import { PetList } from '@pet-store/pet-store/pages/pet-list/feat';
-import { ProtectedRoute } from '@pet-store/shared/guards/protected-route/util';
+import { ProtectedRoute } from '@pet-store/shared/guards/protected-route/data-access';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

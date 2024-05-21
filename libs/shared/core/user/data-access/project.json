@@ -1,0 +1,9 @@
+{
+  "name": "libs-shared-core-user-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/core/user/data-access/src",
+  "projectType": "library",
+  "tags": ["type:data-access"],
+  "// targets": "to see all targets run: nx show project libs-shared-core-user-data-access --web",
+  "targets": {}
+}

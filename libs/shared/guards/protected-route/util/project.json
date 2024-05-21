@@ -1,9 +1,0 @@
-{
-  "name": "protected-route",
-  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/guards/protected-route/util/src",
-  "projectType": "library",
-  "tags": ["type:utility"],
-  "// targets": "to see all targets run: nx show project protected-route --web",
-  "targets": {}
-}

@@ -1,5 +1,5 @@
 {
-  "name": "pet-list",
+  "name": "libs-pet-store-pages-pet-list-feat",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/pet-store/pages/pet-list/feat/src",
   "projectType": "library",

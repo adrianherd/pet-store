@@ -1,9 +1,6 @@
 import styles from './pet-list.module.scss';
 
-/* eslint-disable-next-line */
-export interface PetListProps {}
-
-export function PetList(props: PetListProps) {
+export function PetList() {
   return (
     <div className={styles['container']}>
       <h1>Welcome to PetList!</h1>
