@@ -24,10 +24,10 @@ export function FormPetItem({ pet, onCancel, onSave }: FormPetItemProps) {
     <ListItem
       secondaryAction={
         <Stack direction="row" spacing={1}>
-          <IconButton edge="end" aria-label="cancel" onClick={() => onCancel()}>
+          <IconButton edge="end" aria-label={`Cancel ${name} changes}`} onClick={() => onCancel()}>
             <CancelIcon />
           </IconButton>
-          <IconButton edge="end" aria-label="save" onClick={() => onSave(name, status)}>
+          <IconButton edge="end" aria-label={`Save ${name} changes`} onClick={() => onSave(name, status)}>
             <SaveIcon />
           </IconButton>
         </Stack>
@@ -39,7 +39,7 @@ export function FormPetItem({ pet, onCancel, onSave }: FormPetItemProps) {
             autoFocus
             variant="standard"
             label="Name"
-            id="update-pet-name"
+            id={`update-pet-name-${pet.id}`}
             value={name}
             onChange={
               ({target: {value}}) => setName(value)}
@@ -47,10 +47,11 @@ export function FormPetItem({ pet, onCancel, onSave }: FormPetItemProps) {
         </Grid>
         <Grid item xs={5}>
           <FormControl variant="standard" fullWidth>
-            <InputLabel id="pet-status-label">Status</InputLabel>
+            <InputLabel id={`pet-status-label-${pet.id}`} htmlFor={`update-pet-status-${pet.id}`}>Status</InputLabel>
             <Select
-              labelId="update-pet-status-label"
-              id="update-pet-status"
+              labelId={`pet-status-label-${pet.id}`}
+              id={`update-pet-status-select-${pet.id}`}
+              inputProps={{id: `update-pet-status-${pet.id}`}}
               value={status}
               label="Status"
               onChange={({target: { value }}) => { setStatus(value as PetStatus) }}

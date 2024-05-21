@@ -1,7 +1,8 @@
-import { Pet, PetStatus } from '@pet-store/shared/core/pet/util';
+import { PetStatus } from '@pet-store/shared/core/pet/util';
+import { petsMock } from '../../fixtures/pets-mock';
 
 export function setupPetMocks() {
-  const pets: Pet[] = []
+  const pets = [...petsMock]
 
   // Get Pets by status
   cy.intercept('GET', 'http://localhost:8080/api/v3/pet/findByStatus', req => {

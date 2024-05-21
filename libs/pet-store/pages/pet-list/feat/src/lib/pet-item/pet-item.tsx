@@ -27,10 +27,10 @@ export function PetItem({ pet, handleEdit, handleDelete }: PetItemProps) {
     <ListItem
       secondaryAction={
         <Stack direction="row" spacing={1}>
-          <IconButton edge="end" aria-label="edit" onClick={() => handleEdit()}>
+          <IconButton edge="end" aria-label={`Edit ${pet.name}`} onClick={() => handleEdit()}>
             <EditIcon />
           </IconButton>
-          <IconButton edge="end" aria-label="delete" onClick={() => handleDelete()}>
+          <IconButton edge="end" aria-label={`Delete ${pet.name}`} onClick={() => handleDelete()}>
             <DeleteIcon />
           </IconButton>
         </Stack>

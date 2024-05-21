@@ -54,10 +54,11 @@ export function PetList() {
       <h1 className={styles.header}>Welcome to PetList!</h1>
       <Stack spacing={6}>
         <FormControl fullWidth>
-          <InputLabel id="pet-status-filter-label">Status</InputLabel>
+          <InputLabel id="pet-status-filter-label" htmlFor="pet-status-filter-value">Status</InputLabel>
           <Select
             labelId="pet-status-filter-label"
-            id="pet-status-file"
+            id="pet-status-filter-select"
+            inputProps={{id: 'pet-status-filter-value'}}
             value={status}
             label="Status"
             onChange={({target: { value }}) => setStatus(value as PetStatus) }
