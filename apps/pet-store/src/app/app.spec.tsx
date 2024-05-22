@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import { vi } from 'vitest';
 import App from './app';
 import { UserAuthContextProvider } from '@pet-store/shared/core/user/data-access';
 import { RouterProvider } from 'react-router-dom';

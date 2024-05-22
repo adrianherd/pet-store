@@ -9,9 +9,9 @@ export const PetListOperator = {
 }
 
 export function updateForm(name: string, status: string) {
-  cy.findByRole('textbox', { name: /Name/i }).clear();
-  cy.findByRole('textbox', { name: /Name/i }).type(name);
-  cy.findByRole('textbox', { name: /Name/i }).closest('li').findAllByRole('combobox', { name: /Status/i }).click();
+  cy.findByLabelText(/Name/i).clear();
+  cy.findByLabelText(/Name/i).type(name);
+  cy.findByLabelText(/Name/i).closest('li').findByRole('combobox', { name: /Status/i }).click();
   cy.findByRole('option', { name: new RegExp(`${status}`, 'i')}).click();
 }
 export function saveForm(name: string) {

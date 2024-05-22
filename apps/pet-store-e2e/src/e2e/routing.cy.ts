@@ -7,7 +7,7 @@ describe('PetStore routing', () => {
     setupMocks();
     cy.visit('/');
     cy.url().should('contain', 'login');
-    cy.findByRole('textbox', {name: /Email/i});
+    cy.findByLabelText(/Email/i);
   });
 
   it('redirects to pet-list page from app-root after logging in', () => {

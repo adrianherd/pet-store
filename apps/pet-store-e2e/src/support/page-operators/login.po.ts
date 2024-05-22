@@ -4,6 +4,7 @@ export const LoginOperator = {
 }
 
 export function login() {
-  cy.findByRole('textbox', { name: /email/i }).type('abc');
+  cy.findByLabelText(/Email/i).type('abc');
+  cy.findByLabelText(/Password/i).type('123');
   cy.findByRole('button').click();
 }
