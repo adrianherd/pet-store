@@ -4,8 +4,6 @@ export const LoginOperator = {
 }
 
 export function login() {
-  cy.visit('/login')
-  cy.get('input[name="email"]').type(Cypress.env('email'));
-  cy.get('input[name="password"]').type(Cypress.env('password'));
-  cy.get('button[type="submit"]').click();
+  cy.findByRole('textbox', { name: /email/i }).type('abc');
+  cy.findByRole('button').click();
 }

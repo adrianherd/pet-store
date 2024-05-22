@@ -27,8 +27,8 @@ Run `npx nx build pet-store` to build the application. The build artifacts are s
 ## Test
 Run `npx nx test pet-store` to run all unit tests related to the application.
 
-## Integration test
-Run `npx nx e2e pet-store-e2e` to start a Cypress session that lets you individually run tests. Note that the name change of `pet-store-e2e` is because e2e
+## Cypress Tests
+Run `npx nx open-cypress pet-store-e2e` to start a Cypress session that lets you individually run tests. Note that the name change of `pet-store-e2e` is because e2e
 cypress tests are considered to be their own application in NX.
 
 ## Explore the project graph

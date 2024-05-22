@@ -24,7 +24,7 @@ export function FormPetItem({ pet, onCancel, onSave }: FormPetItemProps) {
     <ListItem
       secondaryAction={
         <Stack direction="row" spacing={1}>
-          <IconButton edge="end" aria-label={`Cancel ${name} changes}`} onClick={() => onCancel()}>
+          <IconButton edge="end" aria-label={`Cancel ${name} changes`} onClick={() => onCancel()}>
             <CancelIcon />
           </IconButton>
           <IconButton edge="end" aria-label={`Save ${name} changes`} onClick={() => onSave(name, status)}>

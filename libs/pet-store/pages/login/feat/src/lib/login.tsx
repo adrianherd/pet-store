@@ -9,6 +9,7 @@ import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress';
 import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserAuthContext } from '@pet-store/shared/core/user/data-access';
@@ -45,11 +46,16 @@ export function Login() {
             event.preventDefault();
             void loginHandler();
           }}>
-            <CardHeader title="Pet Store SSO" />
+            <CardHeader title={
+              <Typography variant="h4" component={"h1"}>
+                Pet Store SSO
+              </Typography>}
+            />
             <CardContent>
               <Stack spacing={2}>
                 <div>
                   <TextField
+                    autoFocus
                     required
                     id="user-email"
                     name="email"
@@ -63,7 +69,7 @@ export function Login() {
                   <TextField
                     required
                     id="user-password"
-                    name="password"
+                    name="user-password"
                     label="Password"
                     type="password"
                     variant="outlined"

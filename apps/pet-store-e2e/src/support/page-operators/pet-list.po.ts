@@ -1,15 +1,50 @@
-import { Pet, PetStatus } from '@pet-store/shared/core/pet/util';
-
 export const PetListOperator = {
   addPet,
   deletePet,
   updatePet,
   changeStatusFilter,
+  updateForm,
+  saveForm,
+  cancelForm,
 }
 
-export function addPet({ name, status }: Pet) { /* TODO: fill in */ }
-export function deletePet(id: string) { /* TODO: fill in */ }
-export function updatePet({ name, status }: Pet) { /* TODO: fill in */ }
-export function changeStatusFilter(status: PetStatus) { /* TODO: fill in */ }
+export function updateForm(name: string, status: string) {
+  cy.findByRole('textbox', { name: /Name/i }).clear();
+  cy.findByRole('textbox', { name: /Name/i }).type(name);
+  cy.findByRole('textbox', { name: /Name/i }).closest('li').findAllByRole('combobox', { name: /Status/i }).click();
+  cy.findByRole('option', { name: new RegExp(`${status}`, 'i')}).click();
+}
+export function saveForm(name: string) {
+  cy.findByRole('button', {
+    name: new RegExp(`Save ${name} changes`, 'i')
+  }).click();
+}
+export function cancelForm(name: string) {
+  cy.findByRole('button', {
+    name: new RegExp(`Cancel ${name} changes`, 'i')
+  }).click();
+}
+
+export function addPet(name: string, status: string) {
+  cy.findByRole('button', { name: /Add new pet/i }).click();
+  updateForm(name, status);
+  saveForm(name);
+}
+export function deletePet(name: string) {
+  cy.findByRole('button', {
+    name: new RegExp(`Delete ${name}`, 'i')
+  }).click();
+}
+export function updatePet(oldName: string, newName: string, newStatus: string) {
+  cy.findByRole('button', {
+    name: new RegExp(`Edit ${oldName}`, 'i')
+  }).click();
+  updateForm(newName, newStatus);
+  saveForm(newName);
+}
+export function changeStatusFilter(status: string) {
+  cy.findByRole('combobox', { name: /Status Filter/i}).click()
+  cy.findByRole('option', { name: new RegExp(`${status}`, 'i')}).click();
+}
 
 
