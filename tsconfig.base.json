@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@pet-store/dummy": ["libs/pet-store/pages/dummy/feat/src/index.ts"],
       "@pet-store/pet-store/pages/login/feat": [
         "libs/pet-store/pages/login/feat/src/index.ts"
       ],
