@@ -31,8 +31,8 @@ export function EditablePetItem({ pet, dispatch }: EditablePetItemProps) {
       { !isEditing
         ? <PetItem
           pet={pet}
-          handleEdit={() => setIsEditing(true)}
-          handleDelete={() => handleDeletePet()} />
+          editHandler={() => setIsEditing(true)}
+          deleteHandler={() => handleDeletePet()} />
         : <FormPetItem
           pet={pet}
           onCancel={() => setIsEditing(false)}
@@ -42,7 +42,7 @@ export function EditablePetItem({ pet, dispatch }: EditablePetItemProps) {
           }}
         />
       }
-      <Divider component="li"/>
+      <Divider/>
     </>
   )
 }

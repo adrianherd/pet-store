@@ -14,10 +14,10 @@ import styles from '../pet-list.module.scss';
 
 export interface PetItemProps {
   pet: Pet;
-  handleDelete: () => void,
-  handleEdit: () => void
+  deleteHandler: () => void,
+  editHandler: () => void
 }
-export function PetItem({ pet, handleEdit, handleDelete }: PetItemProps) {
+export function PetItem({ pet, editHandler, deleteHandler }: PetItemProps) {
   const colorMap: Record<PetStatus, 'primary' | 'success' | 'warning'> = {
     [PetStatus.Available]: 'primary',
     [PetStatus.Pending]: 'warning',
@@ -27,10 +27,10 @@ export function PetItem({ pet, handleEdit, handleDelete }: PetItemProps) {
     <ListItem
       secondaryAction={
         <Stack direction="row" spacing={1}>
-          <IconButton edge="end" aria-label={`Edit ${pet.name}`} onClick={() => handleEdit()}>
+          <IconButton edge="end" aria-label={`Edit ${pet.name}`} onClick={() => editHandler()}>
             <EditIcon />
           </IconButton>
-          <IconButton edge="end" aria-label={`Delete ${pet.name}`} onClick={() => handleDelete()}>
+          <IconButton edge="end" aria-label={`Delete ${pet.name}`} onClick={() => deleteHandler()}>
             <DeleteIcon />
           </IconButton>
         </Stack>
